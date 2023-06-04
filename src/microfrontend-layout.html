@@ -1,0 +1,41 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <main>
+    <!-- <redirect from="/" to="/angular2"></redirect> -->
+
+    <!-- A fourth way to use navigateToUrl, this one inside of your HTML -->
+
+    <route path="angular2">
+      <a href="/" onclick="singleSpaNavigate(event)">My link</a>
+
+      <!-- <application name="@single-spa/welcome"></application> -->
+      <application name="@angular-application-nav"></application>
+
+    </route>
+
+    <route default>
+    
+    <button><a href="/angular2" onclick="singleSpaNavigate(event)">My link</a></button>
+      <!-- <application name="@single-spa/welcome"></application> -->
+      <application name="@angular-application-home"></application>
+
+    </route>
+  </main>
+</single-spa-router>
